@@ -26,7 +26,6 @@ Using Termux removes abstractions and forces understanding of:
 
 This is intentional.
 
----
 
 ## Milestone: Pocket Remote Homelab Access
 
