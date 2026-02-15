@@ -33,3 +33,33 @@ Today the homelab expanded beyond local experimentation into secure remote acces
 ### Concepts Learned
 - **SSH (Secure Shell)**  
   Understanding how remote shell sessions work over TCP (port 22), including authentication, encryption handshake, and remote process execution.
+
+- **Firewall Behavior**  
+  Learned how inbound rules control traffic and how blocked ports cause connection timeouts.
+
+- **Client Isolation (Campus WiFi)**  
+  Discovered that some networks prevent device-to-device communication even on the same subnet, requiring alternative networking strategies.
+
+- **VPN Tunneling (WireGuard via Tailscale)**  
+  Implemented a private encrypted overlay network to bypass local network restrictions securely.
+
+- **Remote Compute Model**  
+  Understood that SSH does not “move” environments — it executes processes on the remote machine while the local device acts only as input/output.
+
+### Architecture Built
+
+Phone (Termux)  
+→ Tailscale encrypted tunnel  
+→ Windows host  
+→ WSL Linux environment  
+→ Development tools (Node, Git, Gemini)
+
+This setup effectively turns the laptop into a private remote development server accessible from anywhere.
+
+### Key Takeaways
+
+- Networking problems are layered (VPN → Firewall → Service → Shell).
+- Remote systems depend on service lifecycle (sleep, process state, auto-start).
+- Infrastructure should reduce friction, not increase it.
+
+
