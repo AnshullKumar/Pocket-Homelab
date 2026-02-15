@@ -26,40 +26,17 @@ Using Termux removes abstractions and forces understanding of:
 
 This is intentional.
 
-## Networking & Remote Access Layer (Today’s Work: 15th Feb 26)
+---
 
-Today the homelab expanded beyond local experimentation into secure remote access and private networking.
+## Milestone: Pocket Remote Homelab Access
 
-### Concepts Learned
-- **SSH (Secure Shell)**  
-  Understanding how remote shell sessions work over TCP (port 22), including authentication, encryption handshake, and remote process execution.
+This session extended the homelab beyond a single-device experiment into a remotely accessible development environment.
 
-- **Firewall Behavior**  
-  Learned how inbound rules control traffic and how blocked ports cause connection timeouts.
+### What Was Built
 
-- **Client Isolation (Campus WiFi)**  
-  Discovered that some networks prevent device-to-device communication even on the same subnet, requiring alternative networking strategies.
-
-- **VPN Tunneling (WireGuard via Tailscale)**  
-  Implemented a private encrypted overlay network to bypass local network restrictions securely.
-
-- **Remote Compute Model**  
-  Understood that SSH does not “move” environments — it executes processes on the remote machine while the local device acts only as input/output.
-
-### Architecture Built
-
-Phone (Termux)  
-→ Tailscale encrypted tunnel  
-→ Windows host  
-→ WSL Linux environment  
-→ Development tools (Node, Git, Gemini)
-
-This setup effectively turns the laptop into a private remote development server accessible from anywhere.
-
-### Key Takeaways
-
-- Networking problems are layered (VPN → Firewall → Service → Shell).
-- Remote systems depend on service lifecycle (sleep, process state, auto-start).
-- Infrastructure should reduce friction, not increase it.
-
+- Configured an SSH server on the laptop (Windows + WSL).
+- Managed firewall rules for secure shell access (port 22).
+- Diagnosed client isolation on campus WiFi.
+- Implemented a private VPN tunnel using Tailscale (WireGuard-based).
+- Established secure remote access from Android (Termux) to the laptop.
 
