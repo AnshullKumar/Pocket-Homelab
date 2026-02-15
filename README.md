@@ -25,3 +25,11 @@ Using Termux removes abstractions and forces understanding of:
 - supervision
 
 This is intentional.
+
+## Networking & Remote Access Layer (Today’s Work: 15th Feb 26)
+
+Today the homelab expanded beyond local experimentation into secure remote access and private networking.
+
+### Concepts Learned
+- **SSH (Secure Shell)**  
+  Understanding how remote shell sessions work over TCP (port 22), including authentication, encryption handshake, and remote process execution.
