@@ -40,3 +40,28 @@ This session extended the homelab beyond a single-device experiment into a remot
 - Implemented a private VPN tunnel using Tailscale (WireGuard-based).
 - Established secure remote access from Android (Termux) to the laptop.
 
+### Architecture
+
+Android (Termux)  
+→ Encrypted Tailscale tunnel  
+→ Windows host  
+→ WSL Linux environment  
+→ Development tools (Node, Git, Gemini)
+
+### Outcome
+
+Using Tailscale and SSH, the homelab can now be accessed securely from a phone.
+
+This effectively creates a **pocket-accessible homelab**, where the Android device acts as a secure remote terminal while computation runs on the laptop.
+
+### Concepts Reinforced
+
+- SSH enables encrypted remote process execution.
+- Firewalls control inbound network traffic.
+- Client isolation blocks peer-to-peer communication in managed networks.
+- VPN tunneling creates a private overlay network across restrictive environments.
+- Remote compute separates execution from interface.
+
+---
+
+
